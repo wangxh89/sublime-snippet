@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+<div class="ui-dialog dialog-md">
+    <div class="modal-header">
+        <h4 class="modal-title">${1:标题}</h4>
+    </div>
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss>${2:取消}</button>
+        <button type="button" class="btn btn-primary js-ok">${3:确定}</button>
+    </div>
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fish-popup</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

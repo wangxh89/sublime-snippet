@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+<div class="js-${1:name}-tab">
+	<!-- Nav tabs -->
+    <ul>
+     	<li>
+      		 <a href="#tabs-a">First</a>
+        </li> 
+         <li>
+             <a href="#tabs-b">Second</a>
+        </li> 
+    </ul>
+    <!-- Tab panes -->
+    <div id="tabs-a">
+    </div>
+    <div id="tabs-b">
+    </div>
+</div>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fish-tabs</tabTrigger>
+</snippet>

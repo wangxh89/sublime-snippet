@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+\$(function() {
+    var \$tabs = \$(".js-name-tab").tabs({
+        activate: function(event, ui) { //tabActive的事件
+            var id = ui.newPanel.attr('id');
+            switch (id) {
+                case "tabs-a":
+                    fish.info("tabs-a"); 
+                    //this.requireView({url: "xxxx",selector: "#tabs-a"});                            
+                    break;
+                case "tabs-b":
+                    fish.info("tabs-b");
+                    //this.requireView({url: "xxxx",selector: "#tabs-b"});                
+                    break; 
+            }
+        }
+    });
+
+    \$tabs.tabs("option", "active", 0);  
+})
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fish-js-tabs</tabTrigger>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+define([
+	'hbs!${2:TemplateName}'
+], function (template) {
+	var tag = '${1:ViewName}';
+	var ${1:ViewName} = fish.View.extend({
+		el:false,
+		template: template,
+		events: {
+		},
+
+		initialize: function(options) {
+			console.log(tag, '--------initialize---------');
+		},
+
+        beforeRender: function () {
+            console.log(tag, '--------beforeRender--------');
+        },
+
+		afterRender: function() {
+            console.log(tag, '--------afterRender--------');
+		},
+
+        remove: function () {
+            console.log(tag, '--------remove--------');
+        },				
+	});
+	return ${1:ViewName};
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fish-popup-js</tabTrigger>
+</snippet>

@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+define([
+	'hbs!${2:TemplateName}'
+], function (template) {
+	var tag = '${1:ViewName}';
+	var ${1:ViewName} = fish.View.extend({
+		el:false,
+		template: template,
+		events: {
+			"click .js-ok": "ok"
+		},
+
+		initialize: function(options) {
+			console.log(tag, '--------initialize---------');
+		},
+
+        beforeRender: function () {
+            console.log(tag, '--------beforeRender--------');
+        },
+
+		afterRender: function() {
+            console.log(tag, '--------afterRender--------');
+		},
+
+        remove: function () {
+            console.log(tag, '--------remove--------');
+        },	
+
+		ok: function() {
+			//此处传值给父
+			this.popup.close("selrows");
+		}         			
+	});
+	return ${1:ViewName};
+});
+
+fish.popupView({
+	url: "treeView01/views/dialog/DlgFileUpload",
+	viewOption:{},
+	callback: function(popup,view) {
+		console.log("OK");
+	},
+	close: function(msg) {
+		console.log("return value: " + msg);
+	}
+})	
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fish-popup-js</tabTrigger>
+</snippet>
